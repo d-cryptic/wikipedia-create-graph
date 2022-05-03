@@ -1,0 +1,133 @@
+ <style>
+      /*#html, #body 
+            {   
+                margin: 0; 
+                height: 100%; 
+                overflow: hidden;
+            }*/
+
+      #body {
+        display: flex;
+        overflow: hidden;
+      }
+
+      #svgcontainer {
+        flex-grow: 1;
+
+        display: flex;
+
+        font-size: x-large;
+      }
+
+      #leftDiv {
+        flex-basis: 65%;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      #pageContainer {
+        position: relative;
+        width: 100%;
+
+        flex-grow: 1;
+      }
+
+      #pageContainer > * {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+      }
+
+      #navbar > * {
+        margin: 5px;
+
+        cursor: pointer;
+
+        display: inline-block;
+      }
+      #navbar button {
+        height: 30px;
+        width: 30px;
+
+        border-style: solid; /* hidden */
+        border-radius: 3px;
+        border-width: 1.5px;
+      }
+      #searchViewButton.search {
+        background: no-repeat center
+          url(https://en.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/search.svg);
+      }
+      #searchViewButton.view {
+        background: no-repeat center / 1.5em
+          url(https://en.wikipedia.org/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.svg); /* document-ltr.svg */
+      }
+
+      #backButton {
+        background: no-repeat center / 1.5em url(./img/leftArrow.svg);
+      }
+      #forwardButton {
+        background: no-repeat center / 1.5em url(./img/rightArrow.svg);
+      }
+
+      #openInWikipediaButton {
+        background: no-repeat center / 2em
+          url(https://upload.wikimedia.org/wikipedia/commons/5/5a/Wikipedia%27s_W.svg);
+      }
+
+      #deleteButton {
+        background: no-repeat -0.08em 0em / 2.25em url(https://upload.wikimedia.org/wikipedia/commons/4/4c/OOjs_UI_icon_trash_apex.svg);
+      }
+
+      #helpButton {
+        background: no-repeat center / 1.25em
+          url(https://upload.wikimedia.org/wikipedia/commons/b/b2/OOjs_UI_icon_help-ltr.svg);
+      }
+
+      #shareButton {
+        background: no-repeat center / 1.25em
+          url(https://upload.wikimedia.org/wikipedia/commons/d/d9/VisualEditor_-_Icon_-_External-link.svg);
+      }
+
+      #aboutButton {
+        background: no-repeat center / 1.75em
+          url(https://upload.wikimedia.org/wikipedia/commons/6/63/OOjs_UI_icon_info_big.svg);
+      }
+
+      #githubButton {
+        background: no-repeat center / 1.75em url(./img/GitHub-Mark-32px.png);
+      }
+
+      .suggestion {
+        display: block;
+        margin: 5px;
+
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: transparent;
+      }
+
+      .selected {
+        border-color: #a2a9b1;
+      }
+
+      #randmArticle {
+        display: inline-block;
+        margin: 5px;
+        margin-left: 15px;
+      }
+
+      .highlight-yellow {
+        background-color: yellow;
+      }
+
+      .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+      }
+    </style>
